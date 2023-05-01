@@ -1,2 +1,2 @@
 # OSProjectSpring2023
-*Ice Cream Factory Problem System Call*
+# Ice Cream Factory Problem System Call
