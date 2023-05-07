@@ -1,13 +1,13 @@
 # OSProjectSpring2023
 # __________________________________________________________________________________________________________________
 # Page Replacement Algorithm by Kernel Threads
-Project Report:
+# Project Report:
 
-INTRODUCTION:
+# INTRODUCTION:
 Page replacement algorithms are the techniques used to replace the pages in a page frame that are no longer required by the program running in the operating system. These algorithms are used to minimize the number of page faults, which is the situation when a requested page is not found in the memory and needs to be swapped in from disk. This project aims to implement three different page replacement algorithms: First-In-First-Out (FIFO), Optimal, and Least Frequently Used (LFU).
 The input to the program is taken from a text file containing the reference string, which is the sequence of pages requested by the program. The program reads this file twice, first to calculate the size of the reference string and second to store the reference string in an integer array. The user is then prompted to input the number of frames to be used for page replacement and to choose which algorithm to use.
 
-DESCRIPTION:
+# DESCRIPTION:
 The first algorithm implemented is the FIFO rule. In this algorithm, the page that has been in the memory for the longest time is replaced. The program creates a temporary array of size equal to the number of frames and initializes it with 0. For each page in the reference string, the program checks if the page is already present in the temporary array. If it is, there is no page fault, and the program moves on to the next page. If it is not, the program replaces the page that has been in the memory for the longest time with the new page. The program also maintains a head pointer that points to the oldest page in the temporary array. If the head pointer reaches the end of the array, it is set back to the beginning. The program outputs each page request and the contents of the frames, indicating whether there was a page fault or not, and writes this information to a text file named output_FIFO.txt.
 
 The second algorithm implemented is the Optimal rule. In this algorithm, the page that will not be needed for the longest time in the future is replaced. The program creates an array of size equal to the reference string and initializes it with 0. For each page in the reference string, the program checks if the page is already present in the array. If it is, there is no page fault, and the program moves on to the next page. If it is not, the program searches the array to find the page that will not be needed for the longest time in the future. If such a page is found, it is replaced with the new page. If not, the page that was requested the longest time ago is replaced. The program outputs each page request and the contents of the frames, indicating whether there was a page fault or not, and writes this information to a text file named output_Optimal.txt.
