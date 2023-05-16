@@ -19,32 +19,33 @@ The third algorithm implemented is the LFU rule. In this algorithm, the page tha
 # Optimal Algorithm Implementation:
 
 //this functions take three parameters:
-//an array myRef[] representing the sequence of memory references 
-//an myFrame representing the number of available page frames
-//and an size representing the size of the myRef[] array.
+1. an array myRef[] representing the sequence of memory references 
+2. an myFrame representing the number of available page frames
+3. and an size representing the size of the myRef[] array.
+
 
 void optimalRule(int myRef[], int myFrame, int size)
 {
     FILE *fout;
-    fout = fopen("output_Optimal.txt", "w");
+    fout = fopen("output_Optimal.txt", "w");  // opens a file which will used to store the output
 
-    int myVector[size];
-    memset(myVector, 0, sizeof(myVector));
+    int myVector[size];  // inititalized the array with equal size to represent the current state of the page frames
+    memset(myVector, 0, sizeof(myVector)); // memset function is used to initialize all elements of array to 0.
 
     for (int i = 0; i < size; i++)
     {
-        int temp[size];
-        int tempIndex = 0;
-        int flag = 1;
+        int temp[size];   // this temporary array will store the current non-empty pages in the page frame
+        int tempIndex = 0;  // it will keep track the number of non empty pages stored in temproray array
+        int flag = 1;    // flag is to set 1 to indicate a page fault
         for (int j = 0; j < size; j++)
         {
-            if (myVector[j] == myRef[i])
+            if (myVector[j] == myRef[i]) //search for the current memory reference if found then flag set to 0.
             {
-                flag = 0;
+                flag = 0; // indicating there is no page fault
             }
             if (myVector[j] != 0)
             {
-                temp[tempIndex] = myVector[j];
+                temp[tempIndex] = myVector[j]; // non zero elements are copied in temproray array to maintain their order.
                 tempIndex++;
             }
         }
