@@ -1,6 +1,6 @@
 # Page Replacement Algorithms by Kernel Threads 
 
-## INTRODUCTION:
+### INTRODUCTION:
 Page replacement algorithms are the techniques used to replace the pages in a page frame that are no longer required by the program running in the operating system. These algorithms are used to minimize the number of page faults, which is the situation when a requested page is not found in the memory and needs to be swapped in from disk. This project aims to implement three different page replacement algorithms: First-In-First-Out (FIFO), Optimal, and Least Frequently Used (LFU).
 The input to the program is taken from a text file containing the reference string, which is the sequence of pages requested by the program. The program reads this file twice, in order to firstly calculate the size of the reference string and secondly to store the reference string in an integer array. The user is then prompted to input the number of frames to be used for page replacement and to choose which algorithm to use.
 
