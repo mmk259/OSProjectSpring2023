@@ -160,7 +160,119 @@ void fifoRule(int myRef[], int myFrame, int size)
     free(temp);
 }
 
+void optimalRule(int myRef[], int myFrame, int size)
+{
+    FILE *fout;
+    fout = fopen("output_Optimal.txt", "w");
 
+    int myVector[size];
+    memset(myVector, 0, sizeof(myVector));
+
+    for (int i = 0; i < size; i++)
+    {
+        int temp[size];
+        int tempIndex = 0;
+        int flag = 1;
+        for (int j = 0; j < size; j++)
+        {
+            if (myVector[j] == myRef[i])
+            {
+                flag = 0;
+            }
+            if (myVector[j] != 0)
+            {
+                temp[tempIndex] = myVector[j];
+                tempIndex++;
+            }
+        }
+        if (flag == 1)
+        {
+            if (myVector[0] == 0 || tempIndex < myFrame)
+            {
+                myVector[tempIndex] = myRef[i];
+            }
+            else
+            {
+                int index = 0;
+                int myFlag = 0;
+                for (int j = i + 1; j < size; j++)
+                {
+                    if (index < myFrame)
+                    {
+                        if (myVector[index] == myRef[j])
+                        {
+                            index++;
+                        }
+                    }
+                    if (index >= myFrame)
+                    {
+                        myFlag = 1;
+                    }
+                }
+                if (myFlag == 0)
+                {
+                    myVector[index] = myRef[i];
+                }
+                else
+                {
+                    int tempj = i + 1;
+                    index = 0;
+                    for (int j = i + 1; j < size; j++)
+                    {
+                        if (index < myFrame)
+                        {
+                            if (myVector[index] == myRef[j])
+                            {
+                                index++;
+                                if (tempj < j)
+                                {
+                                    tempj = j;
+                                }
+                                j = i + 1;
+                            }
+                        }
+                    }
+                    for (int index = 0; index < myFrame; index++)
+                    {
+                        if (myVector[index] == myRef[tempj])
+                        {
+                            myVector[index] = myRef[i];
+                        }
+                    }
+                }
+            }
+        }
+        printf("\n%d   :   ", myRef[i]);
+        fprintf(fout, "%d   :   ", myRef[i]);
+
+        int tempSize = tempIndex;
+        for (int j = tempSize - 1; j >= 0; j--)
+        {
+            printf("| %d | ", temp[j]);
+            fprintf(fout, "| %d | ", temp[j]);
+        }
+        for (int j = 0; j < myFrame - tempSize; j++)
+        {
+            printf("| - | ");
+            fprintf(fout, "| - | ");
+        }
+
+        if (flag == 0)
+        {
+            printf("NO Page fault");
+            fprintf(fout, "NO Page fault");
+            fprintf(fout, "\n");
+        }
+        else
+        {
+            fprintf(fout, "\n");
+        }
+    }
+    printf("\n");
+    fprintf(fout, "\n");
+
+    fclose(fout);
+}
 
 void lfuRule(int myRef[], int myFrame, int size)
 {
