@@ -5,7 +5,7 @@
 
 # INTRODUCTION:
 Page replacement algorithms are the techniques used to replace the pages in a page frame that are no longer required by the program running in the operating system. These algorithms are used to minimize the number of page faults, which is the situation when a requested page is not found in the memory and needs to be swapped in from disk. This project aims to implement three different page replacement algorithms: First-In-First-Out (FIFO), Optimal, and Least Frequently Used (LFU).
-The input to the program is taken from a text file containing the reference string, which is the sequence of pages requested by the program. The program reads this file twice, first to calculate the size of the reference string and second to store the reference string in an integer array. The user is then prompted to input the number of frames to be used for page replacement and to choose which algorithm to use.
+The input to the program is taken from a text file containing the reference string, which is the sequence of pages requested by the program. The program reads this file twice, in order to firstly calculate the size of the reference string and secondly to store the reference string in an integer array. The user is then prompted to input the number of frames to be used for page replacement and to choose which algorithm to use.
 
 # DESCRIPTION:
 The first algorithm implemented is the FIFO rule. In this algorithm, the page that has been in the memory for the longest time is replaced. The program creates a temporary array of size equal to the number of frames and initializes it with 0. For each page in the reference string, the program checks if the page is already present in the temporary array. If it is, there is no page fault, and the program moves on to the next page. If it is not, the program replaces the page that has been in the memory for the longest time with the new page. The program also maintains a head pointer that points to the oldest page in the temporary array. If the head pointer reaches the end of the array, it is set back to the beginning. The program outputs each page request and the contents of the frames, indicating whether there was a page fault or not, and writes this information to a text file named output_FIFO.txt.
@@ -16,10 +16,12 @@ The third algorithm implemented is the LFU rule. In this algorithm, the page tha
 
 # Conclusion:
 
-In conclusion, this project successfully implements three different page replacement algorithms:
-(i)  First-In-First-Out (FIFO)
-(ii) Optimal and Least Frequently Used (LFU). The program takes input from a text file containing a sequence of page requests, and simulates the behavior of each algorithm by keeping track of which pages are currently in memory and which ones have been evicted.
+In conclusion, this project implements three different page replacement algorithms:
+(i)   First-In-First-Out (FIFO)
+(ii)  Optimal 
+(iii) Least Frequently Used (LFU)
+The program takes input from a text file containing a sequence of page requests, and simulates the behavior of each algorithm by keeping track of which pages are currently in memory and which ones have been evicted.
 
 Based on the experimental results, it can be concluded that the Optimal algorithm provides the best overall performance in terms of minimizing page faults, followed by LFU and then FIFO. However, the choice of which algorithm to use may depend on the specific characteristics of the system being simulated. For example, if memory is very limited, the LFU algorithm may be more effective because it prioritizes evicting pages that are used infrequently.
 
-Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and optimize their systems for maximum efficiency.
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
