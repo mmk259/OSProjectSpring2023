@@ -28,7 +28,7 @@ int main()
         }
     }
 
-    printf("Size of reference string is: %d\n", size);
+    printf("Size of Reference String is: %d\n", size);
     fclose(file);
 
     file = fopen(filename, "r");
@@ -54,7 +54,7 @@ int main()
     do
     {
 
-        printf("\nPlease enter how many frames to use (range: 3-6): ");
+        printf("\nPlease enter how many frames to use (from range: 3-6): ");
         scanf("%d", &myFrame);
 
     } while (myFrame < 3 || myFrame > 6);
@@ -64,7 +64,7 @@ int main()
     do
     {
 
-        printf("\n Choose algorithm to implement\n");
+        printf("\n Choose any algorithm to implement\n");
         printf("1. FIFO Rule\n");
         printf("2. Optimal Rule\n");
         printf("3. LFU Rule\n\n");
