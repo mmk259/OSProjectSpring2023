@@ -27,3 +27,11 @@ The program takes input from a text file containing a sequence of page requests,
 Based on the experimental results, it can be concluded that the Optimal algorithm provides the best overall performance in terms of minimizing page faults, followed by LFU and then FIFO. However, the choice of which algorithm to use may depend on the specific characteristics of the system being simulated. For example, if memory is very limited, the LFU algorithm may be more effective because it prioritizes evicting pages that are used infrequently.
 
 Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+ijuuyyyyi
+hguuu
+jhehhrte
+hkrtjtjrde
+jhrtkjkjrekj
+kjtjrjtrjy
+ejtgkejtgr
+jtgryrie
