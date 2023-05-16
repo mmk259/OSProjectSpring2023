@@ -47,6 +47,7 @@ int main()
             myRef[looper] = atoi(temp);
         }
         looper += 1;
+        
     }
     
     int myFrame; 
