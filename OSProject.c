@@ -64,7 +64,7 @@ int main()
     do
     {
 
-        printf("\n--- Please choose which algorithm to use ---\n");
+        printf("\n Choose algorithm to implement\n");
         printf("1. FIFO Rule\n");
         printf("2. Optimal Rule\n");
         printf("3. LFU Rule\n\n");
@@ -72,7 +72,7 @@ int main()
 
     } while (choice < 1 || choice > 3);
 
-    printf("\n___Applying Page Replacement Algorithm___\n");
+    printf("\nApplying Page Replacement Algorithm\n");
     if (choice == 1)
     {
         fifoRule(myRef, myFrame, size);
