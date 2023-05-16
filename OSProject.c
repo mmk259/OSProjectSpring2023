@@ -13,15 +13,11 @@ void lfuRule(int myRef[], int myFrame, int size);
 
 int main()
 {
-    //
-    // Calculating the size of reference string from text file given
-    //
-
     FILE *file;
     char filename[] = "input.txt";
     file = fopen(filename, "r");
 
-    int size = 0; // size of Reference String
+    int size = 0; 
     char temp[MAX_SIZE];
 
     while (fgets(temp, MAX_SIZE, file) != NULL)
@@ -34,10 +30,6 @@ int main()
 
     printf("Size of reference string is: %d\n", size);
     fclose(file);
-
-    //
-    // Storing all the elements from text file into an integer array (size of array calculated above)
-    //
 
     file = fopen(filename, "r");
 
@@ -56,12 +48,8 @@ int main()
         }
         looper += 1;
     }
-
-    //
-    // Getting total frames as input from user
-    //
-
-    int myFrame; // total frames from user
+    
+    int myFrame; 
 
     do
     {
@@ -71,7 +59,7 @@ int main()
 
     } while (myFrame < 3 || myFrame > 6);
 
-    int choice = 0; // choose algorithm to use from user
+    int choice = 0; 
 
     do
     {
