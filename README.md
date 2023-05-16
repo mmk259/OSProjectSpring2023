@@ -9,7 +9,8 @@ The input to the program is taken from a text file containing the reference stri
 
 # DESCRIPTION:
 
-* The first algorithm implemented is the FIFO (First-In, First-Out) rule.\n
+* The first algorithm implemented is the FIFO (First-In, First-Out) rule.
+
 In this algorithm, the page that has been residing in the memory for the longest duration gets replaced. To facilitate this process, the program creates a temporary array with a size equal to the number of frames, initializing all its elements to 0. For every page in the reference string, the program checks if that page is already present in the temporary array. If it is, there is no occurrence of a page fault, and the program proceeds to the next page. Conversely, if the page is not found in the temporary array, the program replaces the page that has been resident in the memory for the longest time with the new page. Additionally, the program keeps track of a head pointer that indicates the oldest page in the temporary array. When the head pointer reaches the end of the array, it wraps around to the beginning. The program generates an output comprising each page request, the contents of the frames, and whether a page fault occurred or not. This information is written to a text file named "output_FIFO.txt".
 
 * The second algorithm implemented is the Optimal rule. 
