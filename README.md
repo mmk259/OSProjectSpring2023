@@ -1,6 +1,6 @@
 # Project Report:
 
-# Page Replacement Algorithm by Kernel Threads
+# Page Replacement Algorithms by Kernel Threads
 
 
 # INTRODUCTION:
