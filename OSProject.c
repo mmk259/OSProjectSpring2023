@@ -4,6 +4,7 @@
 #include <string.h>
 
 #define MAX_SIZE 10
+
 void fifoRule (int myRef[], int myFrame, int size);
 void optimalRule(int myRef[], int myFrame, int size);
 void lfuRule(int myRef[], int myFrame, int size);
@@ -66,7 +67,9 @@ int main()
         printf("3. LFU Rule\n\n");
         scanf("%d", &choice);
 
-    } while (choice < 1 || choice > 3);
+    } 
+    
+    while (choice < 1 || choice > 3);
 
     if (choice == 1)
     {
@@ -83,6 +86,7 @@ int main()
     	printf("\nApplying LFU Page Replacement Algorithm\n");
         lfuRule(myRef, myFrame, size);
     }
+    
     return 0;
 }
 
@@ -147,6 +151,7 @@ void fifoRule(int myRef[], int myFrame, int size)
                     fprintf(fout, "- | ");
                 }
             }
+            
             fprintf(fout, "\n");
         }
     }
@@ -171,6 +176,7 @@ void optimalRule(int myRef[], int myFrame, int size)
         int temp[size];
         int tempIndex = 0;
         int flag = 1;
+        
         for (int j = 0; j < size; j++)
         {
             if (myVector[j] == myRef[i])
@@ -183,6 +189,7 @@ void optimalRule(int myRef[], int myFrame, int size)
                 tempIndex++;
             }
         }
+        
         if (flag == 1)
         {
             if (myVector[0] == 0 || tempIndex < myFrame)
@@ -240,6 +247,7 @@ void optimalRule(int myRef[], int myFrame, int size)
                 }
             }
         }
+        
         printf("\n%d   :   ", myRef[i]);
         fprintf(fout, "%d   :   ", myRef[i]);
 
@@ -266,6 +274,7 @@ void optimalRule(int myRef[], int myFrame, int size)
             fprintf(fout, "\n");
         }
     }
+    
     printf("\n");
     fprintf(fout, "\n");
 
@@ -344,12 +353,15 @@ void lfuRule(int myRef[], int myFrame, int size)
                     printf("%d | ", myArray[j]);
                     fprintf(fout, "%d | ", myArray[j]);
                 }
+                
                 else
                 {
                     printf("- | ");
                     fprintf(fout, "- | ");
                 }
+                
             }
+            
             
             fprintf(fout, "\n");
         }
@@ -358,3 +370,5 @@ void lfuRule(int myRef[], int myFrame, int size)
     fprintf(fout, "\n");
     fclose(fout);
 }
+
+
