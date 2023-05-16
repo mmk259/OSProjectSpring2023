@@ -12,7 +12,7 @@ The input to the program is taken from a text file containing the reference stri
 
 * **The third algorithm implemented is the _LFU rule_.** In this algorithm, the page that has been used the least number of times is replaced. The program creates a temporary array of size equal to the number of frames and initializes it with 0. For each page in the reference string, the program checks if the page is already present in the temporary array. If it is, the program increments a counter associated with the page. If it is not, the program replaces the page that has been used the least number of times with the new page. If multiple pages have been used the same number of times, the program replaces the one that has been in the memory for the longest time. The program outputs each page request and the contents of the frames, indicating whether there was a page fault or not, and writes this information to a text file named "LFU.txt".
 
-### Conclusion:
+### CONCLUSION:
 
 In conclusion, this project implements three different page replacement algorithms:
 *   First-In-First-Out (FIFO)
