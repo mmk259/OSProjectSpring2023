@@ -11,6 +11,7 @@ void lfuRule(int myRef[], int myFrame, int size);
 
 int main()
 {
+    
     FILE *file;
     char filename[] = "Input.txt";
     file = fopen(filename, "r");
@@ -51,6 +52,7 @@ int main()
 
     do
     {
+        
         printf("\nPlease enter how many frames to use (from range: 3-6): ");
         scanf("%d", &myFrame);
 
