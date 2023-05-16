@@ -357,8 +357,7 @@ void lfuRule(int myRef[], int myFrame, int size)
             fprintf(fout, "\n");
         }
     }
-    
-    printf("\n");
+      printf("\n");
     fprintf(fout, "\n");
     fclose(fout);
 }
