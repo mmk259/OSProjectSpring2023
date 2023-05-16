@@ -15,9 +15,9 @@ The input to the program is taken from a text file containing the reference stri
 ## Conclusion:
 
 In conclusion, this project implements three different page replacement algorithms:
-(i)   First-In-First-Out (FIFO)
-(ii)  Optimal (OPT and MIN)
-(iii) Least Frequently Used (LFU)
+* (i)   First-In-First-Out (FIFO)
+* (ii)  Optimal (OPT and MIN)
+* (iii) Least Frequently Used (LFU)
 
 The program takes input from a text file containing a sequence of page requests, and simulates the behavior of each algorithm by keeping track of which pages are currently in memory and which ones have been evicted.
 
