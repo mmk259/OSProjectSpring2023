@@ -1,5 +1,5 @@
 # Project Report:
-# ______________________________________________________
+# ____________________________________________________
 # Page Replacement Algorithm by Kernel Threads
 
 
@@ -16,7 +16,8 @@ The third algorithm implemented is the LFU rule. In this algorithm, the page tha
 
 # Conclusion:
 
-In conclusion, this project successfully implements three different page replacement algorithms: First-In-First-Out (FIFO), Optimal, and Least Frequently Used (LFU). The program takes input from a text file containing a sequence of page requests, and simulates the behavior of each algorithm by keeping track of which pages are currently in memory and which ones have been evicted.
+In conclusion, this project successfully implements three different page replacement algorithms:
+(i) First-In-First-Out (FIFO), Optimal, and Least Frequently Used (LFU). The program takes input from a text file containing a sequence of page requests, and simulates the behavior of each algorithm by keeping track of which pages are currently in memory and which ones have been evicted.
 
 Based on the experimental results, it can be concluded that the Optimal algorithm provides the best overall performance in terms of minimizing page faults, followed by LFU and then FIFO. However, the choice of which algorithm to use may depend on the specific characteristics of the system being simulated. For example, if memory is very limited, the LFU algorithm may be more effective because it prioritizes evicting pages that are used infrequently.
 
