@@ -318,6 +318,7 @@ void lfuRule(int myRef[], int myFrame, int size)
                     min = k;
                 }
             }
+            
             myArray[min] = myRef[i];
             countFrequency[min] = 1;
             timeFrequency[min] = 0;
@@ -332,6 +333,7 @@ void lfuRule(int myRef[], int myFrame, int size)
             fprintf(fout, "NO Page fault");
             fprintf(fout, "\n");
         }
+        
         else
         {
             for (int j = 0; j < myFrame; j++)
@@ -351,11 +353,12 @@ void lfuRule(int myRef[], int myFrame, int size)
                     fprintf(fout, "- | ");
                 }
             }
+            
             fprintf(fout, "\n");
         }
     }
+    
     printf("\n");
     fprintf(fout, "\n");
-
     fclose(fout);
 }
