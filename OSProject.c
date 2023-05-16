@@ -33,7 +33,7 @@ int main()
 
     file = fopen(filename, "r");
 
-    int myRef[size]; // integer array
+    int myRef[size]; 
     int looper = 0;
 
     while (fgets(temp, MAX_SIZE, file) != NULL)
