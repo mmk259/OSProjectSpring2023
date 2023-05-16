@@ -14,7 +14,7 @@ void lfuRule(int myRef[], int myFrame, int size);
 int main()
 {
     FILE *file;
-    char filename[] = "input.txt";
+    char filename[] = "Input.txt";
     file = fopen(filename, "r");
 
     int size = 0; 
@@ -72,17 +72,19 @@ int main()
 
     } while (choice < 1 || choice > 3);
 
-    printf("\nApplying Page Replacement Algorithm\n");
     if (choice == 1)
     {
+    	printf("\nApplying FIFO Page Replacement Algorithm\n");
         fifoRule(myRef, myFrame, size);
     }
     else if (choice == 2)
     {
+    	printf("\nApplying Optimal Page Replacement Algorithm\n");
         optimalRule(myRef, myFrame, size);
     }
     else
     {
+    	printf("\nApplying LFU Page Replacement Algorithm\n");
         lfuRule(myRef, myFrame, size);
     }
     return 0;
@@ -91,7 +93,7 @@ int main()
 void fifoRule(int myRef[], int myFrame, int size)
 {
     FILE *fout;
-    fout = fopen("output_FIFO.txt", "w");
+    fout = fopen("FIFO.txt", "w");
     int i, j, flag, popped;
     int *temp = (int *)malloc(sizeof(int) * myFrame);
     memset(temp, 0, sizeof(int) * myFrame);
@@ -163,7 +165,7 @@ void fifoRule(int myRef[], int myFrame, int size)
 void optimalRule(int myRef[], int myFrame, int size)
 {
     FILE *fout;
-    fout = fopen("output_Optimal.txt", "w");
+    fout = fopen("Optimal.txt", "w");
 
     int myVector[size];
     memset(myVector, 0, sizeof(myVector));
@@ -274,11 +276,10 @@ void optimalRule(int myRef[], int myFrame, int size)
     fclose(fout);
 }
 
-
 void lfuRule(int myRef[], int myFrame, int size)
 {
     FILE *fout;
-    fout = fopen("output_LFU.txt", "w");
+    fout = fopen("LFU.txt", "w");
 
     int myArray[myFrame];
     int countFrequency[myFrame];
