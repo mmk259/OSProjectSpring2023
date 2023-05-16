@@ -28,3 +28,208 @@ Based on the experimental results, it can be concluded that the Optimal algorith
 
 Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
 
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overall, this project demonstrates the importance of page replacement algorithms in managing memory and optimizing system performance. By understanding the trade-offs between these different algorithms and their specific use cases, system administrators and developers can make informed decisions about how to design and to optimize their systems to maximize efficiency.
