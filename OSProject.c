@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include <ctype.h>
-#include <limits.h>
 
 #define MAX_SIZE 10
 void fifoRule (int myRef[], int myFrame, int size);
