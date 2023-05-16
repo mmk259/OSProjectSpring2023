@@ -6,7 +6,6 @@
 #include <limits.h>
 
 #define MAX_SIZE 10
-
 void fifoRule (int myRef[], int myFrame, int size);
 void optimalRule(int myRef[], int myFrame, int size);
 void lfuRule(int myRef[], int myFrame, int size);
@@ -123,8 +122,8 @@ void fifoRule(int myRef[], int myFrame, int size)
             }
         }
 
-        printf("\n%d   :   ", myRef[i]);
-        fprintf(fout, "%d   :   ", myRef[i]);
+        printf ("\n%d  :   ", myRef[i]);
+        fprintf(fout, "%d  :   ", myRef[i]);
 
         if (isPresent)
         {
@@ -169,7 +168,7 @@ void optimalRule(int myRef[], int myFrame, int size)
     int myVector[size];
     memset(myVector, 0, sizeof(myVector));
 
-    for (int i = 0; i < size; i++)
+    for (int i= 0; i< size; i++)
     {
         int temp[size];
         int tempIndex = 0;
@@ -190,7 +189,7 @@ void optimalRule(int myRef[], int myFrame, int size)
         {
             if (myVector[0] == 0 || tempIndex < myFrame)
             {
-                myVector[tempIndex] = myRef[i];
+                myVector[tempIndex] =myRef[i];
             }
             else
             {
