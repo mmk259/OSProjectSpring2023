@@ -1,13 +1,10 @@
-# Project Report:
+# Page Replacement Algorithms by Kernel Threads 
 
-# Page Replacement Algorithms by Kernel Threads
-
-
-# INTRODUCTION:
+## INTRODUCTION:
 Page replacement algorithms are the techniques used to replace the pages in a page frame that are no longer required by the program running in the operating system. These algorithms are used to minimize the number of page faults, which is the situation when a requested page is not found in the memory and needs to be swapped in from disk. This project aims to implement three different page replacement algorithms: First-In-First-Out (FIFO), Optimal, and Least Frequently Used (LFU).
 The input to the program is taken from a text file containing the reference string, which is the sequence of pages requested by the program. The program reads this file twice, in order to firstly calculate the size of the reference string and secondly to store the reference string in an integer array. The user is then prompted to input the number of frames to be used for page replacement and to choose which algorithm to use.
 
-# DESCRIPTION:
+## DESCRIPTION:
 
 * The first algorithm implemented is the FIFO (First-In, First-Out) rule.
 
@@ -18,7 +15,7 @@ In this algorithm, the page that will not be needed for the longest time in the 
 
 The third algorithm implemented is the LFU rule. In this algorithm, the page that has been used the least number of times is replaced. The program creates a temporary array of size equal to the number of frames and initializes it with 0. For each page in the reference string, the program checks if the page is already present in the temporary array. If it is, the program increments a counter associated with the page. If it is not, the program replaces the page that has been used the least number of times with the new page. If multiple pages have been used the same number of times, the program replaces the one that has been in the memory for the longest time. The program outputs each page request and the contents of the frames, indicating whether there was a page fault or not, and writes this information to a text file named output_LFU.txt.
 
-# Conclusion:
+## Conclusion:
 
 In conclusion, this project implements three different page replacement algorithms:
 (i)   First-In-First-Out (FIFO)
