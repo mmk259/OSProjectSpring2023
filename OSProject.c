@@ -63,7 +63,7 @@ int main()
 
     do
     {
-        printf("\n Choose any algorithm to implement\n");
+        printf("\n Choose any algorithm to implement \n");
         printf("1. FIFO Rule\n");
         printf("2. Optimal Rule\n");
         printf("3. LFU Rule\n\n");
