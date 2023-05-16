@@ -1,5 +1,5 @@
 # Project Report:
-# ____________________________________________________
+
 # Page Replacement Algorithm by Kernel Threads
 
 
