@@ -7,7 +7,7 @@
 
 #define MAX_SIZE 10
 
-void fifoRule(int myRef[], int myFrame, int size);
+void fifoRule (int myRef[], int myFrame, int size);
 void optimalRule(int myRef[], int myFrame, int size);
 void lfuRule(int myRef[], int myFrame, int size);
 
@@ -30,7 +30,6 @@ int main()
 
     printf("Size of Reference String is: %d\n", size);
     fclose(file);
-
     file = fopen(filename, "r");
 
     int myRef[size]; 
@@ -54,17 +53,16 @@ int main()
 
     do
     {
-
         printf("\nPlease enter how many frames to use (from range: 3-6): ");
         scanf("%d", &myFrame);
 
-    } while (myFrame < 3 || myFrame > 6);
+    } 
+    while (myFrame < 3 || myFrame > 6);
 
     int choice = 0; 
 
     do
     {
-
         printf("\n Choose any algorithm to implement\n");
         printf("1. FIFO Rule\n");
         printf("2. Optimal Rule\n");
