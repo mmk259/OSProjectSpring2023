@@ -99,48 +99,66 @@ int main()
 void fifoRule(int myRef[], int myFrame, int size)
 {
     FILE *fout;
-    fout = fopen("FIFO.txt", "w");
+    // Open output file for writing
+    fout = fopen("FIFO.txt", "w");       
     int i, j, flag, popped;
+    // Allocate memory for the frame
     int *temp = (int *)malloc(sizeof(int) * myFrame);
+    // Initialize the frame with zeros
     memset(temp, 0, sizeof(int) * myFrame);
     bool isPresent;
+    
+    // Index to keep track of the oldest page
     int head = 0;
 
     for (i = 0; i < size; i++)
     {
+        // Initialize flag to indicate if page is present in frame
         isPresent = false;
         for (j = 0; j < myFrame; j++)
         {
+            // Check if page is already present in the frame
             if (temp[j] == myRef[i])
             {
+                // Set flag to true if page is present
                 isPresent = true;
+                // Exit the loop since page is found
                 break;
             }
         }
+        // If page is not present in frame, perform page replacement
         if (!isPresent)
         {
+            // If the oldest page is not empty, replace it with the current page
             if (temp[head] != 0)
             {
                 temp[head] = myRef[i];
+                // Update the head index in a circular manner
                 head = (head + 1) % myFrame;
             }
+            // If the oldest page is empty, simply replace it with the current page
             else
             {
                 temp[head] = myRef[i];
             }
         }
-
+        
+        // Print the current page reference
         printf ("\n%d  :   ", myRef[i]);
+        // Write the current page reference to the output file
         fprintf(fout, "%d  :   ", myRef[i]);
 
+        // If the page is already present in the frame, no page fault occurred
         if (isPresent)
         {
             printf("NO Page fault");
             fprintf(fout, "NO Page fault");
             fprintf(fout, "\n");
         }
+        // If the page is not present in the frame, a page fault occurred
         else
         {
+            // Print the page value
             for (j = 0; j < myFrame; j++)
             {
                 printf("| ");
@@ -148,24 +166,31 @@ void fifoRule(int myRef[], int myFrame, int size)
                 if (temp[j] != 0)
                 {
                     popped = temp[j];
+                    // Print the page value
                     printf("%d | ", popped);
+                    // Write the page value to the output file
                     fprintf(fout, "%d | ", popped);
                 }
                 else
                 {
+                    // Print a dash "-" to indicate an empty frame
                     printf("- | ");
+                    // Write a dash "-" to the output file to indicate an empty frame
                     fprintf(fout, "- | ");
                 }
             }
-            
+            // Write a newline character to the output file after printing the frame status
             fprintf(fout, "\n");
         }
     }
 
     printf("\n");
+    
     fprintf(fout, "\n");
 
+    // Close the output file
     fclose(fout);
+    // Free the dynamically allocated memory for the frame
     free(temp);
 }
 
