@@ -100,10 +100,13 @@ void fifoRule(int myRef[], int myFrame, int size)
 {
     FILE *fout;
     // Open output file for writing
+    
     fout = fopen("FIFO.txt", "w");       
     int i, j, flag, popped;
+    
     // Allocate memory for the frame
     int *temp = (int *)malloc(sizeof(int) * myFrame);
+    
     // Initialize the frame with zeros
     memset(temp, 0, sizeof(int) * myFrame);
     bool isPresent;
@@ -179,6 +182,7 @@ void fifoRule(int myRef[], int myFrame, int size)
                     fprintf(fout, "- | ");
                 }
             }
+            
             // Write a newline character to the output file after printing the frame status
             fprintf(fout, "\n");
         }
