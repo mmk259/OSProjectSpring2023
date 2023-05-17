@@ -169,39 +169,46 @@ void fifoRule(int myRef[], int myFrame, int size)
     free(temp);
 }
 
+//this functions take three parameters:
+1. an array myRef[] representing the sequence of memory references
+2. an myFrame representing the number of available page frames
+3. and an size representing the size of the myRef[] array.
+
+
 void optimalRule(int myRef[], int myFrame, int size)
 {
     FILE *fout;
-    fout = fopen("Optimal.txt", "w");
+    fout = fopen("output_Optimal.txt", "w");  // opens a file which will used to store the output
 
-    int myVector[size];
-    memset(myVector, 0, sizeof(myVector));
+    int myVector[size];  // inititalized the array with equal size to represent the current state of the page frames
+    memset(myVector, 0, sizeof(myVector)); // memset function is used to initialize all elements of array to 0.
 
-    for (int i= 0; i< size; i++)
+    for (int i = 0; i < size; i++)
     {
-        int temp[size];
-        int tempIndex = 0;
-        int flag = 1;
-        
+        int temp[size];   // this temporary array will store the current non-empty pages in the page frame
+        int tempIndex = 0;  // it will keep track the number of non empty pages stored in temproray array
+        int flag = 1;    // flag is to set 1 to indicate a page fault
         for (int j = 0; j < size; j++)
         {
-            if (myVector[j] == myRef[i])
+            if (myVector[j] == myRef[i]) //search for the current memory reference if found then flag set to 0.
             {
-                flag = 0;
+                flag = 0; // indicating there is no page fault
             }
             if (myVector[j] != 0)
             {
-                temp[tempIndex] = myVector[j];
+                temp[tempIndex] = myVector[j]; // non zero elements are copied in temproray array to maintain their order.
                 tempIndex++;
             }
         }
-        
-        if (flag == 1)
+        if (flag == 1) // page fault occured
         {
-            if (myVector[0] == 0 || tempIndex < myFrame)
+//There are two scenarios for handling the page fault:
+//either there is an empty slot in myVector[], or all slots are occupied.
+            if (myVector[0] == 0 || tempIndex < myFrame) // if there is an empty slot the current memory reference is added to the first empty slot
             {
-                myVector[tempIndex] =myRef[i];
+                myVector[tempIndex] = myRef[i];
             }
+//If all slots are occupied, the code predicts which page in myVector[] will not be used for the longest period in the future. It does this by searching for the next occurrence of each page in myVector[] after the current position (i) in the myRef[] array.
             else
             {
                 int index = 0;
@@ -215,11 +222,14 @@ void optimalRule(int myRef[], int myFrame, int size)
                             index++;
                         }
                     }
+//If a page in myVector[] is not found in the remaining memory references (myRef[]), it means it will not be used in the future, and that page is replaced with the current memory reference.
                     if (index >= myFrame)
                     {
                         myFlag = 1;
                     }
                 }
+//If all pages in 'myVector[]' are predicted to be used in the future, then
+//inds the furthest occurrence of any page in myVector[] and replaces that page with the current memory reference.
                 if (myFlag == 0)
                 {
                     myVector[index] = myRef[i];
@@ -253,7 +263,6 @@ void optimalRule(int myRef[], int myFrame, int size)
                 }
             }
         }
-        
         printf("\n%d   :   ", myRef[i]);
         fprintf(fout, "%d   :   ", myRef[i]);
 
@@ -280,7 +289,6 @@ void optimalRule(int myRef[], int myFrame, int size)
             fprintf(fout, "\n");
         }
     }
-    
     printf("\n");
     fprintf(fout, "\n");
 
