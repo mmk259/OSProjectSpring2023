@@ -11,7 +11,7 @@ void lfuRule(int myRef[], int myFrame, int size);
 
 int main()
 {
-    
+    // Opening the input file for counting the number of lines in the input file
     FILE *file;
     char filename[] = "Input.txt";
     file = fopen(filename, "r");
@@ -29,6 +29,8 @@ int main()
 
     printf("Size of Reference String is: %d\n", size);
     fclose(file);
+    
+    // Opening the input file for reading the reference string from the input file
     file = fopen(filename, "r");
 
     int myRef[size]; 
@@ -48,6 +50,7 @@ int main()
         
     }
     
+    // Getting the number of frames to use from the user
     int myFrame; 
 
     do
@@ -59,6 +62,7 @@ int main()
     } 
     while (myFrame < 3 || myFrame > 6);
 
+    // Getting the algorithm choice from the user and calling the selected algorithm
     int choice = 0; 
 
     do
@@ -288,10 +292,14 @@ void lfuRule(int myRef[], int myFrame, int size)
     FILE *fout;
     fout = fopen("LFU.txt", "w");
 
+    // Array to store the pages in the frames
     int myArray[myFrame];
+    // Array to keep track of the frequency count of each page
     int countFrequency[myFrame];
+    // Array to keep track of the time of the last access for each page
     int timeFrequency[myFrame];
 
+    //loop to initialize the pages in the frames to -1 (empty), frequency count of each page to 0 & time of the last access for each page to 0 
     for (int j = 0; j < myFrame; j++)
     {
         myArray[j] = -1;
@@ -301,13 +309,16 @@ void lfuRule(int myRef[], int myFrame, int size)
 
     for (int i = 0; i < size; i++)
     {
+        // Flag to check if a page is present in the frames
         int flag = 1;
         
         for (int j = 0; j < myFrame; j++)
         {
             if (myRef[i] == myArray[j])
             {
+                // Page is already present in the frames
                 flag = 0;
+                // Increment the frequency count of the page
                 countFrequency[j]++;
                 break;
             }
@@ -315,21 +326,26 @@ void lfuRule(int myRef[], int myFrame, int size)
 
         if (flag == 1)
         {
+            // Index of the page with the minimum frequency count
             int min = 0;
             
             for (int k = 1; k < myFrame; k++)
             {
                 if (countFrequency[k] < countFrequency[min])
                 {
+                    // Update the index of the page with the minimum frequency count
                     min = k;
                 }
                 else if (countFrequency[k] == countFrequency[min] && timeFrequency[k] > timeFrequency[min])
                 {
+                    // If two pages have the same frequency count, choose the one that was accessed earlier
                     min = k;
                 }
             }
             
+            // Replace the page with the minimum frequency count
             myArray[min] = myRef[i];
+            // Reset the frequency count of the new page to 1 & time of the last access for the new page to 0
             countFrequency[min] = 1;
             timeFrequency[min] = 0;
         }
@@ -339,11 +355,11 @@ void lfuRule(int myRef[], int myFrame, int size)
 
         if (flag == 0)
         {
+             // Page is already present in the frames
             printf("NO Page fault");
             fprintf(fout, "NO Page fault");
             fprintf(fout, "\n");
         }
-        
         else
         {
             for (int j = 0; j < myFrame; j++)
@@ -353,6 +369,7 @@ void lfuRule(int myRef[], int myFrame, int size)
 
                 if (myArray[j] != -1)
                 {
+                    // Increment the time of the last access for each page in the frames
                     timeFrequency[j]++;
                     printf("%d | ", myArray[j]);
                     fprintf(fout, "%d | ", myArray[j]);
@@ -360,15 +377,12 @@ void lfuRule(int myRef[], int myFrame, int size)
                 
                 else
                 {
+                    // Empty frame
                     printf("- | ");
                     fprintf(fout, "- | ");
                 }
-                
             }
-       
-            
             fprintf(fout, "\n");
-            
         }
     }
     
